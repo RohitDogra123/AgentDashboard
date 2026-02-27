@@ -9,44 +9,95 @@
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
+            background-color: #f4f4f4;
+        }
+        .container {
+            width: 90%;
+            margin: auto;
+            overflow: hidden;
+        }
+        header {
+            background: #35424a;
+            color: #ffffff;
+            padding: 10px 0;
+            text-align: center;
+        }
+        .filter-bar {
             display: flex;
+            justify-content: space-between;
+            margin: 20px 0;
         }
-        .sidebar {
-            width: 250px;
-            background: #333;
-            color: white;
+        .filter {
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            background: #ffffff;
+            margin-right: 10px;
+        }
+        .metric-card {
+            background: #ffffff;
+            border: 1px solid #ccc;
+            border-radius: 5px;
             padding: 15px;
-            height: 100vh;
+            margin: 10px;
+            flex: 1;
         }
-        .sidebar a {
-            color: white;
-            text-decoration: none;
-            display: block;
-            padding: 10px 15px;
+        .company-card {
+            background: #ffffff;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            padding: 15px;
+            margin: 10px;
+            flex: 1;
         }
-        .sidebar a:hover {
-            background: #575757;
-        }
-        .main-content {
-            flex-grow: 1;
-            padding: 20px;
-        }
-        h1 {
-            color: #333;
+        .metrics-container, .companies-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
         }
     </style>
 </head>
 <body>
-    <div class="sidebar">
-        <h2>Dashboard</h2>
-        <a href="#overview">Overview</a>
-        <a href="#reports">Reports</a>
-        <a href="#settings">Settings</a>
-        <a href="#logout">Logout</a>
-    </div>
-    <div class="main-content">
-        <h1>Welcome to the Agent Dashboard</h1>
-        <p>This is where you will find your data, manage your clients, and generate reports.</p>
+    <header>
+        <h1>Agent Dashboard</h1>
+    </header>
+    <div class="container">
+        <div class="filter-bar">
+            <input type="text" class="filter" placeholder="Search...">
+            <select class="filter">
+                <option>Filter 1</option>
+                <option>Filter 2</option>
+            </select>
+            <button class="filter">Apply</button>
+        </div>
+        <div class="metrics-container">
+            <div class="metric-card">
+                <h2>Metric 1</h2>
+                <p>Details about Metric 1.</p>
+            </div>
+            <div class="metric-card">
+                <h2>Metric 2</h2>
+                <p>Details about Metric 2.</p>
+            </div>
+            <div class="metric-card">
+                <h2>Metric 3</h2>
+                <p>Details about Metric 3.</p>
+            </div>
+        </div>
+        <div class="companies-container">
+            <div class="company-card">
+                <h2>Company 1</h2>
+                <p>Details about Company 1.</p>
+            </div>
+            <div class="company-card">
+                <h2>Company 2</h2>
+                <p>Details about Company 2.</p>
+            </div>
+            <div class="company-card">
+                <h2>Company 3</h2>
+                <p>Details about Company 3.</p>
+            </div>
+        </div>
     </div>
 </body>
 </html>
